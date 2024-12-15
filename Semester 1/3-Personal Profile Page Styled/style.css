@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0ff;
+  color: #003366;
+}
+
+header h1 {
+  text-align: center;
+  color: #004080;
+}
+
+h2 {
+  color: #0059b3;
+}
+
+.personal-info p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.favorites ol {
+  background-color: #cce0ff;
+  border: 1px solid #003366;
+  border-radius: 18px;
+}
+
+.profile-picture img {
+  border: 2px solid #003366;
+  border-radius: 50%;
+}
+
+footer p {
+  font-size: 14px;
+  color: #003366;
+}

@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  color: #056fec;
+  transition: transform 0.3s ease-in-out;
+}
+
+header .container {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+header .container nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+header .container nav ul li {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: inherit;
+}
+header .container nav ul li.active {
+  color: darkblue;
+}
+
+header .container nav ul li a {
+  transition: color 0.3s;
+}
+
+header .container nav ul li:hover a {
+  color: rgb(5, 47, 61);
+}

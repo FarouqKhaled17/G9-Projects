@@ -1,0 +1,45 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f7ecde;
+  min-height: 100vh;
+}
+
+hr {
+  border-top: 2px dotted black;
+  opacity: 1;
+}
+
+header h1 {
+  position: relative;
+  width: fit-content;
+  margin: 4rem auto;
+  color: #352e28;
+}
+
+main form button {
+  background-color: #d1512d;
+  color: #fff;
+  padding-inline: 3rem;
+}
+
+main form button:hover {
+  background-color: #bb4120;
+}
+
+table td {
+  vertical-align: middle;
+}
+
+table td a {
+  background-color: #9eb23b;
+  border: none;
+}
+
+table td a:hover {
+  background-color: #8a9e23;
+}
+
+::selection {
+  background-color: #fec260;
+  color: black;
+}

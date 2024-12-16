@@ -14,6 +14,8 @@
   font-weight: bold;
 }
 
+
+
 @media (max-width: 576px) {
   .heading h2 {
     font-size: 2rem;
@@ -236,7 +238,7 @@ nav .navbar-nav > li:hover > a,
 
 section#home {
   min-height: 100vh;
-  background: url("./images/hero-bg.jpg") ;
+  background: url("./images/wallpaperflare.com_wallpaper (1).jpg") ;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
   display: grid;
   place-content: center;
@@ -263,5 +265,8 @@ section#home p {
   background-color: var(--main_color);
   border-color: #cde1f8;
   color: #fff;
+}
+
+#about img {
 }
 

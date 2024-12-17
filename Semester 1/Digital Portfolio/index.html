@@ -12,10 +12,13 @@
     <title>Digital Portfolio</title>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <nav id="navbar" class="navbar fixed-top navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand fs-3 fw-semibold" href="#">Portfolio</a>
+          <a class="navbar-brand fs-3 fw-semibold text-white" href="#"
+            >Portfolio</a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -31,11 +34,9 @@
             class="collapse navbar-collapse flex-grow-0 ms-auto"
             id="navbarSupportedContent"
           >
-            <ul class="navbar-nav gap-3 me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav gap-4 me-auto mb-2 mb-lg-0">
               <li class="nav-item text-uppercase">
-                <a class="nav-link active" aria-current="page" href="#home"
-                  >Home</a
-                >
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item text-uppercase">
                 <a class="nav-link" href="#about">About</a>
@@ -43,201 +44,126 @@
               <li class="nav-item text-uppercase">
                 <a class="nav-link" href="#services">Services</a>
               </li>
-              <li class="nav-item text-uppercase">
-                <a class="nav-link" href="#work">Work</a>
-              </li>
-              <li class="nav-item text-uppercase">
-                <a class="nav-link" href="#blog">Blog</a>
-              </li>
-              <li class="nav-item dropdown text-uppercase">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Drop down
-                </a>
-                <ul
-                  class="dropdown-menu-1 text-bg-light list-unstyled p-4 text-capitalize fw-semibold"
-                >
-                  <li class="mb-4">
-                    <a class="dropdown-item fw-semibold" href="#"
-                      >Drop Down 1</a
-                    >
-                  </li>
-                  <li class="mb-4 dropdown-2">
-                    <a
-                      class="dropdown-item dropdown-toggle-1 fw-semibold d-flex justify-content-between align-items-center"
-                      href="#"
-                      >Deep Drop Down <i class="fa-solid fa-angle-right"></i
-                    ></a>
-
-                    <ul
-                      class="dropdown-menu-2 fs-6 text-bg-light list-unstyled p-4 text-capitalize fw-semibold"
-                    >
-                      <li class="mb-4">
-                        <a class="dropdown-item fw-semibold" href="#"
-                          >Deep Drop Down 1</a
-                        >
-                      </li>
-                      <li class="mb-4">
-                        <a class="dropdown-item fw-semibold" href="#"
-                          >Deep Drop Down 2</a
-                        >
-                      </li>
-                      <li class="mb-4">
-                        <a class="dropdown-item fw-semibold" href="#"
-                          >Deep Drop Down 3</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item fw-semibold" href="#"
-                          >Deep Drop Down 4</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="mb-4">
-                    <a class="dropdown-item fw-semibold" href="#"
-                      >Drop Down 2</a
-                    >
-                  </li>
-                  <li class="mb-4">
-                    <a class="dropdown-item fw-semibold" href="#"
-                      >Drop Down 3</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item fw-semibold" href="#"
-                      >Drop Down 4</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item text-uppercase">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main
-    >
-      <section id="home" class="text-light text-center">
-        <h2 class="display-1 fw-semibold mb-4">I'm Farouk Khaled</h2>
-        <p class="display-6 fw-semibold mb-4 text-danger info">A Full Stack Developer</p>
-        
-      </section>
-      <section id="about" style="padding-top: 5rem">
-        <article class="container bg-white shadow">
-          <div class="row p-3 p-lg-5">
-            <div class="col-12 col-lg-6">
-              <div class="row gy-5">
-                <div
-                  class="col-12 d-flex flex-column flex-lg-row align-items-start align-content-lg-center"
-                >
-                  <div class="row w-100 align-items-center">
-                    <div class="col-12 col-sm-auto mb-3 m-sm-0">
-                      <img
-                        src="./images/profile-pic (11).png"
-                        alt="Farouk Khaled"
-                        class="rounded d-block me-4 w-100 "
-                        style="max-width: 250px"
-                      />
-                    </div>
-                    <div class="col-12
-                      col-sm-auto
-                      d-flex
-                      flex-column
-                      justify-content-center
-                    ">
-                      <h2 class="fw-semibold text-uppercase display-5">About Me</h2>
-                      <p class="text-secondary">
-                        A fresh graduate from Computer Science Department and a full stack developer working with mern stack
-                      </p>
 
-         
+    <!-- Main Content -->
+    <main>
+      <!-- Home Section -->
+      <section
+        id="home"
+        class="text-light text-center d-flex justify-content-center align-items-center"
+        style="height: 100vh"
+      >
+        <div>
+          <h2 class="display-1 fw-semibold mb-4">I'm Farouk Khaled</h2>
+          <p class="display-6 fw-bold mb-4 text-bg-danger ">A Full Stack Developer</p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" style="padding-top: 5rem; background-color: #f8f9fa">
+        <article class="container bg-white shadow rounded-4">
+          <div class="row p-3 p-lg-5 align-items-center">
+            <div class="col-md-6 text-center">
+              <img
+                src="./images/profile-pic (11).png"
+                alt="Farouk Khaled"
+                class="rounded-circle w-50"
+              />
+            </div>
+            <div class="col-md-6">
+              <h2 class="fw-bold text-uppercase">About Me</h2>
+              <p class="text-secondary">
+                A fresh graduate from Computer Science Department and a full
+                stack developer working with MERN stack.
+              </p>
+            </div>
           </div>
         </article>
       </section>
-      <section id="services">
+
+      <!-- Services Section -->
+      <section id="services" class="bg-light py-5">
         <div class="container">
           <div class="heading">
             <h2>SERVICES</h2>
             <p>
-              We offer a wide range of services to help you get your business off
-              the ground
+              We offer a wide range of services to help you get your business
+              off the ground
             </p>
           </div>
           <div
             class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 text-center"
           >
+            <!-- Service 1 -->
             <div class="col">
-              <div
-                class="bg-white p-4 rounded-4 d-flex flex-column align-items-center shadow"
-              >
-                <i class="fa-solid fa-briefcase mb-3"></i>
-                <h3 class="text-uppercase fs-4 mb-3">WEB DESIGN</h3>
+              <div class="bg-white p-4 rounded-4 shadow">
+                <i class="fa-solid fa-briefcase mb-3 fs-2 text-primary"></i>
+                <h3 class="text-uppercase fs-5 mb-3">Web Design</h3>
                 <p class="text-secondary">
-                  Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design; user interface design; authoring, including standardised code and proprietary software; user experience design; and search engine optimization.
+                  Web design encompasses many different skills and disciplines
+                  in the production and maintenance .
                 </p>
               </div>
             </div>
+            <!-- Service 2 -->
             <div class="col">
-              <div
-                class="bg-white p-4 rounded-4 d-flex flex-column align-items-center shadow"
-              >
-                <i class="fa-solid fa-list-check mb-3"></i>
-                <h3 class="text-uppercase fs-4 mb-3">WEB DEVELOPMENT</h3>
+              <div class="bg-white p-4 rounded-4 shadow">
+                <i class="fa-solid fa-list-check mb-3 fs-2 text-primary"></i>
+                <h3 class="text-uppercase fs-5 mb-3">Web Development</h3>
                 <p class="text-secondary">
-                  web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.
+                  Web development ranges from simple static pages to complex web
+                  applications and services.
                 </p>
               </div>
             </div>
+            <!-- Service 3 -->
             <div class="col">
-              <div
-                class="bg-white p-4 rounded-4 d-flex flex-column align-items-center shadow"
-              >
-                <i class="fa-solid fa-chart-simple mb-3"></i>
-                <h3 class="text-uppercase fs-4 mb-3">PHOTOGRAPHY</h3>
+              <div class="bg-white p-4 rounded-4 shadow">
+                <i class="fa-solid fa-chart-simple mb-3 fs-2 text-primary"></i>
+                <h3 class="text-uppercase fs-5 mb-3">Photography</h3>
                 <p class="text-secondary">
-                  Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film.
+                  Creating durable images by recording light electronically or
+                  chemically.
                 </p>
               </div>
             </div>
+            <!-- Service 4 -->
             <div class="col">
-              <div
-                class="bg-white p-4 rounded-4 d-flex flex-column align-items-center shadow"
-              >
-                <i class="fa-solid fa-binoculars mb-3"></i>
-                <h3 class="text-uppercase fs-4 mb-3">RESPONSIVE DESIGN</h3>
+              <div class="bg-white p-4 rounded-4 shadow">
+                <i class="fa-solid fa-binoculars mb-3 fs-2 text-primary"></i>
+                <h3 class="text-uppercase fs-5 mb-3">Responsive Design</h3>
                 <p class="text-secondary">
-                  Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.
+                  Making web pages render well on a variety of devices and
+                  screen sizes.
                 </p>
               </div>
             </div>
+            <!-- Service 5 -->
             <div class="col">
-              <div
-                class="bg-white p-4 rounded-4 d-flex flex-column align-items-center shadow"
-              >
-                <i class="fa-regular fa-sun mb-3"></i>
-                <h3 class="text-uppercase fs-4 mb-3">GRAPHIC DESIGN</h3>
+              <div class="bg-white p-4 rounded-4 shadow">
+                <i class="fa-regular fa-sun mb-3 fs-2 text-primary"></i>
+                <h3 class="text-uppercase fs-5 mb-3">Graphic Design</h3>
                 <p class="text-secondary">
-                  Graphic design is the process of visual communication and problem-solving through the use of typography, photography, iconography and illustration.
+                  Visual communication and problem-solving through typography,
+                  photography, and illustration.
                 </p>
               </div>
             </div>
+            <!-- Service 6 -->
             <div class="col">
-              <div
-                class="bg-white p-4 rounded-4 d-flex flex-column align-items-center shadow"
-              >
-                <i class="fa-solid fa-envelopes-bulk mb-3"></i>
-                <h3 class="text-uppercase fs-4 mb-3">MARKETING SERVICES</h3>
+              <div class="bg-white p-4 rounded-4 shadow">
+                <i
+                  class="fa-solid fa-envelopes-bulk mb-3 fs-2 text-primary"
+                ></i>
+                <h3 class="text-uppercase fs-5 mb-3">Marketing Services</h3>
                 <p class="text-secondary">
-                  Marketing is the study and management of exchange relationships. It is the business process of identifying, anticipating and satisfying customers' needs and wants.
+                  Identifying, anticipating, and satisfying customers' needs and
+                  wants.
                 </p>
               </div>
             </div>
@@ -245,18 +171,12 @@
         </div>
       </section>
     </main>
-    <footer
-      class="p-3 p-sm-4 text-center"
-      style="
-        background-color: #000;
-        color: #fff;
-        box-shadow: 0 0 20px 5px rgb(0 0 0 / 20%) inset;
-      "
-    >
-      <p class="mb-2">
-        &#169; Copyright <strong>Portfolio</strong>. All Rights Reserved
-      </p>
+
+    <!-- Footer -->
+    <footer class="p-4 text-center text-white" style="background-color: #000">
+      <p>&#169; Copyright <strong>Farouk Khaled Portfolio</strong>. All Rights Reserved</p>
     </footer>
+
     <script src="./js/bootstrap.bundle.js"></script>
   </body>
 </html>

@@ -37,8 +37,13 @@ nav {
   background-color: transparent;
 }
 
+
 .nav-link {
-  color: #ffffff;
+  color: #000000;
+}
+
+.navbar-brand {
+  color: rgba(0, 0, 0, 0.726);
 }
 
 .nav-link,
@@ -48,7 +53,7 @@ nav {
 
 .nav-link:hover,
 .navbar-brand:hover {
-  color: #c7bbbb !important;
+  color: #ada2a2 ;
 }
 
 #home {

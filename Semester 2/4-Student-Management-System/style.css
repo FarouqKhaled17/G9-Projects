@@ -1,11 +1,12 @@
 body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: #f7ecde;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #205ccd, #000000);
   min-height: 100vh;
+  font-weight: bold;
 }
 
 hr {
-  border-top: 2px dotted black;
+  border-top: 2px dotted rgb(235, 225, 225);
   opacity: 1;
 }
 
@@ -14,32 +15,4 @@ header h1 {
   width: fit-content;
   margin: 4rem auto;
   color: #352e28;
-}
-
-main form button {
-  background-color: #d1512d;
-  color: #fff;
-  padding-inline: 3rem;
-}
-
-main form button:hover {
-  background-color: #bb4120;
-}
-
-table td {
-  vertical-align: middle;
-}
-
-table td a {
-  background-color: #9eb23b;
-  border: none;
-}
-
-table td a:hover {
-  background-color: #8a9e23;
-}
-
-::selection {
-  background-color: #fec260;
-  color: black;
 }

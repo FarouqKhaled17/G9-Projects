@@ -4,7 +4,7 @@ const Student = require("./studentModel.js");
 
 const app = express();
 app.use(express.json());
-const PORT = 4000;
+const PORT = 3000;
 const MONGO_URI = "mongodb://localhost:27017/test";
 
 mongoose.connect(MONGO_URI).then(() => {

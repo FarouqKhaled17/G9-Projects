@@ -11,7 +11,7 @@ a {
 :root {
   --main-Color: #a53509;
   --main-color-alt: #1787e0;
-  --main-transition: 0.3s;
+  --main-transition: 0.2s;
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
   --section-background: #ececec;
@@ -63,7 +63,7 @@ ul {
 
 /* Start Header */
 .header {
-  background: white;
+  background: transparent;
   box-shadow: 0 0 10px #ddd;
   position: relative;
 }
@@ -155,15 +155,6 @@ ul {
 .mega-menu .links li {
   position: relative;
 }
-.mega-menu .links li:not(:last-child) {
-  border-bottom: 1px solid #e9e6e6;
-}
-
-@media (max-width: 767px) {
-  .header .mega-menu .links:first-of-type li:last-child {
-    border-bottom: 1px solid #e9e6e6;
-  }
-}
 
 .mega-menu .links li::before {
   content: "";
@@ -209,12 +200,13 @@ ul {
   content: "";
   position: absolute;
   left: 0;
-  top: -20px;
+  top: 1px;
   width: 100%;
   height: 100%;
   background: #ececec;
   z-index: -1;
-  transform: skewY(-6deg);
+  transform: skewY(-15deg);
+  transform: skewX(-8deg);
   transform-origin: left top;
 }
 

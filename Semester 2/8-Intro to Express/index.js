@@ -22,7 +22,6 @@ app.post("/AddUser", (req, res) => {
     res.json({ message: "Email already exists" });
     return;
   }
-
   users.push({ id, name, email });
   res.json({ message: "User added successfully" });
 });
@@ -44,12 +43,10 @@ app.put("/UpdateUser", (req, res) => {
   const userData = req.body;
   const { email, id, name } = userData;
   const userIndex = users.findIndex((user) => user.email === email);
-
   if (userIndex === -1) {
     res.json({ message: "User not found" });
     return;
   }
-
   users[userIndex] = { id, name, email };
   res.json({ message: "User updated successfully" });
 });
@@ -58,12 +55,10 @@ app.put("/UpdateUser", (req, res) => {
 app.get("/SearchUserById/:id", (req, res) => {
   const id = parseInt(req.params.id, 10);
   const user = users.find((user) => user.id === id);
-
   if (!user) {
     res.json({ message: "User not found" });
     return;
   }
-
   res.json(user);
 });
 

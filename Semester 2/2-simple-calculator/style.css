@@ -1,5 +1,5 @@
 body {
-  background-color: #f5efefac;
+  background-color: #091948;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ button {
 }
 
 button:hover {
-  background-color: #1b1d1b;
+  background-color: #060706;
 }
 
 button:active {

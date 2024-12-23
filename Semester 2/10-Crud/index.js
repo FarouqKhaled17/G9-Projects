@@ -26,38 +26,42 @@ app.post("/student", async (req, res) => {
 
 app.get("/student", async (req, res) => {
     const students = await Student.find();
-    res.json(students);
+    res.status(200).json(students);
 });
 
 app.get("/student/:id", async (req, res) => {
     const { id } = req.params;
     const student = await Student.findById(id);
-    res.json(student);
+    if (student) {
+        res.status(200).json(student);
+    }
+    else {
+        res.status(404).json({ message: "Student not found" });
+    }
 });
 
 app.put("/student/:id", async (req, res) => {
     const { id } = req.params;
     const { name, age, email, password } = req.body;
     const student = await Student.findByIdAndUpdate(id, { name, age, email, password }, { new: true });
-    res.json(student);
+    res.status(200).json(student);
 });
 
 app.delete("/student/:id", async (req, res) => {
     const { id } = req.params;
     await Student.findByIdAndDelete(id);
-    res.json({ message: "Student deleted successfully" });
+    res.status(200).json({ message: "Student deleted successfully" });
 });
 
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
-    const student = await Student.findByIdAndUpdate(id, { email, password });
+    const student = await Student.findOne({ email, password });
     if (student) {
-        res.json({ message: "Login successful" });
+        res.status(200).json({ message: "Login successful" });
     } else {
-        res.json({ message: "Login failed" });
+        res.status(401).json({ message: "Login failed" });
     }
 });
-
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

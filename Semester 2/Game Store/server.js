@@ -1,22 +1,16 @@
 const express = require("express");
-const Game = require("./models/gameModel");
-const dbConnection = require("./db/dbConnection");
+const Game = require("./models/gameModel.js");
+const dbConnection = require("./db/dbConnection.js");
 const User = require("./models/userModel.js");
 const { uploadSingleFile } = require("./fileUpload.js");
 const cors = require("cors");
-
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use('/uploads', express.static('uploads'));
 const PORT = 4000;
 dbConnection();
-
-
-app.get("/", (req, res) => {
-    res.send("Hello World");
-});
-
+//!Game Apis
 app.post("/game", uploadSingleFile("image"), async (req, res) => {
     const { name, description, price, players, duration, age } = req.body;
     const game = new Game({ name, description, price, players, duration, age });
@@ -37,7 +31,6 @@ app.post("/user/game", async (req, res) => {
         res.status(404).json({ message: "User not found" });
     }
 })
-
 app.get("/game", async (req, res) => {
     const games = await Game.find();
     res.status(200).json(games);
@@ -59,12 +52,18 @@ app.put("/game/:id", async (req, res) => {
     const updatedGame = await Game.findByIdAndUpdate(id, { name, description, price, players, duration, age }, { new: true });
     res.status(200).json(updatedGame);
 });
+
 app.delete("/game/:id", async (req, res) => {
     const { id } = req.params;
-    await Game.findByIdAndDelete(id);
-    res.status(200).json({ message: "Game deleted successfully" });
+    const isExist = await Game.findByIdAndDelete(id);
+    if (isExist) {
+        res.status(200).json({ message: "Game deleted successfully" });
+    } else {
+        res.status(404).json({ message: "Game not found" });
+    }
 });
 
+//? User Apis
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email, password });
@@ -100,6 +99,23 @@ app.get("/user/:id", async (req, res) => {
     const user = await User.findById(id);
     if (user) {
         res.status(200).json(user);
+    } else {
+        res.status(404).json({ message: "User not found" });
+    }
+});
+
+app.put("/user/:id", async (req, res) => {
+    const { id } = req.params;
+    const { username, email, password, role } = req.body;
+    const updatedUser = await User.findByIdAndUpdate(id, { username, email, password, role }, { new: true });
+    res.status(200).json(updatedUser);
+});
+
+app.delete("/user/:id", async (req, res) => {
+    const { id } = req.params;
+    const isExist = await User.findByIdAndDelete(id);
+    if (isExist) {
+        res.status(200).json({ message: "User deleted successfully" });
     } else {
         res.status(404).json({ message: "User not found" });
     }

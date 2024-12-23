@@ -1,7 +1,7 @@
 const { mongoose } = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-    username: {
+    name: {
         type: String,
         required: true,
     },
@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    games: [{
+    FavGames: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Game"
     }],

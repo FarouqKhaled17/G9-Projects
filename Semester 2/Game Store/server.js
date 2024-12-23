@@ -10,6 +10,7 @@ app.use(cors());
 app.use('/uploads', express.static('uploads'));
 const PORT = 4000;
 dbConnection();
+
 //!Game Apis
 app.post("/game", uploadSingleFile("image"), async (req, res) => {
     const { name, description, price, players, duration, age } = req.body;
@@ -75,13 +76,13 @@ app.post("/login", async (req, res) => {
 });
 
 app.post("/signup", uploadSingleFile("image"), async (req, res) => {
-    const { username, email, password, role } = req.body;
+    const { name, email, password, role } = req.body;
     const exist = await User.findOne({ email, password });
     if (exist) {
         res.status(400).json({ message: "User already exists" });
         return;
     }
-    const user = new User({ username, email, password, role });
+    const user = new User({ name, email, password, role });
     if (req.file) {
         user.image = req.file.path;
     }
@@ -106,9 +107,9 @@ app.get("/user/:id", async (req, res) => {
 
 app.put("/user/:id", async (req, res) => {
     const { id } = req.params;
-    const { username, email, password, role } = req.body;
-    const updatedUser = await User.findByIdAndUpdate(id, { username, email, password, role }, { new: true });
-    res.status(200).json(updatedUser);
+    const { name, email, password, role } = req.body;
+    const updatedUser = await User.findByIdAndUpdate(id, { name, email, password, role }, { new: true });
+    res.status(200).json("Updated Successfully", updatedUser);
 });
 
 app.delete("/user/:id", async (req, res) => {

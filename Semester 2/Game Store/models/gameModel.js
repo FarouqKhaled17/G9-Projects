@@ -18,7 +18,6 @@ const gameSchema = new mongoose.Schema({
     },
     duration: {
         type: Number,
-        required: true
     },
     age: {
         type: Number,

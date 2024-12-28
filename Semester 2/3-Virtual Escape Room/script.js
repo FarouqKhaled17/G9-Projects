@@ -1,43 +1,48 @@
-function startGame() {
-  alert("Welcome to the JavaScript Escape Room! Can you solve all the challenges?");
+let currentQuestion = 1;
 
-  let answer1 = prompt("🔑 What is the value of the variable `let x = 5`?");
-  if (answer1 === "5") {
-    alert("🎉 Correct! You've unlocked the first clue.");
-  } else {
-    alert("❌ Incorrect! Try again.");
-    return;
+document.getElementById("startBtn").addEventListener("click", () => {
+  currentQuestion = 1;
+  showQuestion();
+});
+
+function showQuestion() {
+  let question = "";
+  let answer = "";
+
+  if (currentQuestion === 1) {
+    question = "🔑 What is the value of `let x = 5`?";
+    answer = "5";
+  } else if (currentQuestion === 2) {
+    question = "🧩 What is the output of `function greet() { return 'Hello, World!'; }`?";
+    answer = "hello, world!";
+  } else if (currentQuestion === 3) {
+    question = "🔄 What will be printed from `for (let i = 0; i < 3; i++) { console.log(i); }`?";
+    answer = "0, 1, 2";
+  } else if (currentQuestion === 4) {
+    question = "⚡ What is the result of `if (x = 10) console.log('High')`?";
+    answer = "high";
   }
 
-  let answer2 = prompt("🧩 What is the output of this function: `function greet() { return 'Hello, World!'; }`?");
-  if (answer2.toLowerCase() === "hello, world!") {
-    alert("🎉 Correct! You're getting closer!");
-  } else {
-    alert("❌ Oops! Try again!");
-    return;
-  }
+  document.getElementById("question").textContent = question;
+  document.getElementById("feedback").textContent = "";
+  document.getElementById("answer").value = "";
+  document.getElementById("submitBtn").style.display = "inline-block";
+  document.getElementById("submitBtn").onclick = () => checkAnswer(answer);
+}
 
-  let answer3 = prompt("🔄 What will be printed from this loop: `for (let i = 0; i < 3; i++) { console.log(i); }`?");
-  if (answer3 === "0, 1, 2") {
-    alert("🎉 Correct! You're halfway through!");
-  } else {
-    alert("❌ Incorrect! Try again.");
-    return;
-  }
+function checkAnswer(correctAnswer) {
+  const userAnswer = document.getElementById("answer").value.toLowerCase();
 
-  let answer4 = prompt("⚡ What will be the result of the following code: `let x = 10; if (x > 5) { console.log('High'); } else { console.log('Low'); }`?");
-  if (answer4.toLowerCase() === "high") {
-    alert("🎉 Congratulations! You've escaped the room!");
+  if (userAnswer === correctAnswer.toLowerCase()) {
+    document.getElementById("feedback").textContent = "🎉 Correct!";
+    currentQuestion++;
+    if (currentQuestion <= 4) {
+      setTimeout(showQuestion, 1000);
+    } else {
+      document.getElementById("feedback").textContent = "🎉 You've completed the game!";
+      document.getElementById("submitBtn").style.display = "none";
+    }
   } else {
-    alert("❌ Oh no, try again!");
-    return;
+    document.getElementById("feedback").textContent = "❌ Incorrect! Try again.";
   }
-
-  setTimeout(() => {
-    document.body.innerHTML = `
-      <div class="content">
-        <h1>🎉 You Escaped the Room! 🎉</h1>
-        <p>Great job! You solved all the JavaScript challenges and escaped the room! 🎉🚀</p>
-      </div>`;
-  }, 500);
 }

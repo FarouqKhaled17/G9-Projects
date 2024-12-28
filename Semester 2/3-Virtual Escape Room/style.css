@@ -15,8 +15,6 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  position: relative;
-  animation: backgroundAnimation 8s ease-in-out infinite;
 }
 
 .content {
@@ -52,7 +50,7 @@ button {
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
@@ -64,18 +62,18 @@ button:active {
   transform: translateY(0);
 }
 
-button:focus {
-  outline: none;
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 300px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+#feedback {
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-top: 10px;
 }

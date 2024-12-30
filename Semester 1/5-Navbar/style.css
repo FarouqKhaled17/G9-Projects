@@ -61,7 +61,7 @@ header .container nav ul li {
   font-family: inherit;
 }
 header .container nav ul li.active {
-  color: darkblue;
+  color: rgb(17, 17, 173);
 }
 
 header .container nav ul li a {

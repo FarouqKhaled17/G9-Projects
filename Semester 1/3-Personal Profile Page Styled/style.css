@@ -27,6 +27,7 @@ h2 {
 .profile-picture img {
   border: 2px solid #003366;
   border-radius: 50%;
+  width: 90px;
 }
 
 footer p {

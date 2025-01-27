@@ -34,7 +34,7 @@ html {
 header {
   top: 0;
   width: 100%;
-  color: #056fec;
+  color: #000000;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -45,29 +45,54 @@ header .container {
   align-items: center;
 }
 
-header .container .logo {
-  font-size: 26px;
-  font-weight: bold;
+header .container .logo img {
+  width: 60%;
+  height: 80%;
 }
 
 header .container nav ul {
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 
 header .container nav ul li {
   font-size: 18px;
   font-weight: bold;
-  font-family: inherit;
-}
-header .container nav ul li.active {
-  color: rgb(17, 17, 173);
 }
 
-header .container nav ul li a {
-  transition: color 0.3s;
+header .container .btn {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-left: 18px;
 }
 
-header .container nav ul li:hover a {
-  color: rgb(5, 47, 61);
+header .container .btn .contact {
+  color: white;
+  background-color: #26d366;
+  border: none;
+  border-radius: 18px;
+  height: 60px;
+  width: 120px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+header .container .btn .login {
+  color: #056FEC;
+  background-color: #ffffff;
+  border: 1px solid #056FEC;
+  border-radius: 18px;
+  height: 60px;
+  width: 120px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }

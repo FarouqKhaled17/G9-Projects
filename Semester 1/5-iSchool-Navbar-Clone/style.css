@@ -64,7 +64,7 @@ header .container .btn {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-left: 18px;
+  margin-left: 28px;
 }
 
 header .container .btn .contact {
@@ -73,26 +73,36 @@ header .container .btn .contact {
   border: none;
   border-radius: 18px;
   height: 60px;
-  width: 120px;
+  width: 122px;
   padding: 14px 24px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: bolder;
   display: flex;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
+header .container .btn .contact:hover {
+  background-color: #13a749;
+  border-radius: 24px;
+}
+
 header .container .btn .login {
-  color: #056FEC;
+  color: #056fec;
   background-color: #ffffff;
-  border: 1px solid #056FEC;
+  border: 1px solid #056fec;
   border-radius: 18px;
   height: 60px;
-  width: 120px;
+  width: 130px;
   padding: 14px 24px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: bolder;
   display: flex;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+header .container .btn .login:hover {
+  background-color: #056fec;
+  color: #ffffff;
 }

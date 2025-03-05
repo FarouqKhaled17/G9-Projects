@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a2e;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #0f3460;
+  color: white;
+  padding: 2px;
+}
+
+.tier-list {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.tier {
+  border: 2px solid white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.s-tier {
+  background-color: #ff4d4d;
+}
+.a-tier {
+  background-color: #ffa500;
+}
+.b-tier {
+  background-color: #ffcc00;
+}
+.c-tier {
+  background-color: #008080;
+}
+.d-tier {
+  background-color: #666666;
+}
+
+.games img {
+  width: 140px;
+  height: 140px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.games img:hover {
+  transform: scale(1.1);
+  border-color: #e2ba19;
+}
+
+footer {
+  background-color: #0f3460;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}

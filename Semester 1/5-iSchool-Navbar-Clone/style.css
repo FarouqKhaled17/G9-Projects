@@ -22,10 +22,6 @@ button {
   font-family: inherit;
 }
 
-html {
-  font-size: 16px;
-}
-
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -46,13 +42,13 @@ header .container {
 }
 
 header .container .logo img {
-  width: 60%;
+  width: 80%;
   height: 80%;
 }
 
 header .container nav ul {
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 
 header .container nav ul li {
@@ -64,7 +60,7 @@ header .container .btn {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-left: 28px;
+  margin-left: 30px;
 }
 
 header .container .btn .contact {
@@ -72,14 +68,13 @@ header .container .btn .contact {
   background-color: #26d366;
   border: none;
   border-radius: 18px;
-  height: 60px;
-  width: 122px;
+  height: 50px;
+  width: 170px;
   padding: 14px 24px;
   font-size: 14px;
   font-weight: bolder;
-  display: flex;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 header .container .btn .contact:hover {
@@ -92,14 +87,13 @@ header .container .btn .login {
   background-color: #ffffff;
   border: 1px solid #056fec;
   border-radius: 18px;
-  height: 60px;
-  width: 130px;
+  height: 50px;
+  width: 190px;
   padding: 14px 24px;
   font-size: 14px;
   font-weight: bolder;
-  display: flex;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 header .container .btn .login:hover {

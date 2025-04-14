@@ -1,0 +1,50 @@
+body {
+  background: #0d1b2a;
+  color: #f8f8f8;
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.level-container {
+  text-align: center;
+  border: 2px solid #00ffff;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #1b263b;
+  box-shadow: 0 0 20px #00ffff55;
+  max-width: 90%;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffff;
+  margin-top: 1rem;
+}
+
+.goal {
+  font-size: 1rem;
+  color: #00ffff;
+  margin: 1rem 0;
+}
+
+
+/*! Solution */
+@media screen and (max-width: 667px) {
+  .hero-img {
+    display: none;
+  }
+}

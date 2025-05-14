@@ -1,8 +1,4 @@
-const userName = prompt("What is your name?").trim();
+const userName = prompt("What is your name?");
+const userOrder = prompt("What is your order?");
 
-const greetingMessage = userName 
-  ? `Hello, ${userName}!
-It's just the beginning of your journey into the world of JavaScript and Backend development 🚀💪🏻`
-  : "Hello, Stranger!";
-
-alert(greetingMessage);
+alert(`Hello ${userName} Your order is ${userOrder}`);

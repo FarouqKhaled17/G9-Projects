@@ -1,0 +1,18 @@
+.line1{
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+.line2{
+    font-size: 32px;
+    text-align: bolder;
+}
+.line3{
+    font-size: 64px;
+    text-align: center;
+    background-color: rgb(255, 98, 0);
+}
+
+body{
+    background-image: url("18246325_v996-022.jpg");
+}

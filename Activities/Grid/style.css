@@ -32,8 +32,8 @@ p {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 10px;
   padding: 30px;
   max-width: 1100px;
@@ -56,8 +56,8 @@ p {
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
-  grid-column-start: 1 ;
-  grid-column-end: 2;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
 }
 
 .grid-item:hover {

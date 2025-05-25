@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="left">
+        <a href="/">Your Name</a>
+      </div>
+
+      <div class="right">
+        <a href="#skills">
+          <span>Skills</span>
+        </a>
+
+        <a href="#projects">
+          <span>Projects</span>
+        </a>
+
+        <a href="mailto:name@example.com">
+          <span>Contact</span>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- SECTION 1: Hero -->
+      <section class="hero-section">
+        <div class="text">
+          <h2>Hi, I'm <span>Student Name</span></h2>
+          <p>
+            I'm a <span class="highlight">Web Developer</span> with a passion
+            for creating beautiful and functional websites. I specialize in
+            front-end development. Through iSchool, I build user-friendly
+            applications that provide a great user experience.
+          </p>
+        </div>
+        <div class="headshot">
+          <img src="images/avatar (2).png" alt="your_name_image" />
+        </div>
+      </section>
+
+      <!-- SECTION 2: Skills -->
+      <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="text">
+          Some of the technologies I work with include HTML, CSS, and Bootstrap.
+          I am always eager to learn new technologies and improve my skills. I
+          enjoy working on projects that challenge me and allow me to grow as a
+          developer.
+        </div>
+
+        <div class="cells">
+          <div class="cell">
+            <img src="images/html.png" alt="html logo" />
+            <span>HTML</span>
+          </div>
+
+          <div class="cell">
+            <img src="images/css.png" alt="css logo" />
+            <span>CSS</span>
+          </div>
+
+          <div class="cell">
+            <img src="images/bootstrap.png" alt="bootstrap logo" />
+            <span>Bootstrap</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Projects -->
+      <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="text">
+          Here are some of the projects I've worked on. Each project showcases
+          my skills in web development and design. Feel free to explore them!
+        </div>
+        <!-- Duplicate the card with changing the project image and name -->
+        <div class="project-cards">
+          <div class="card">
+            <img src="images/gameTierList.png" alt="Game Tier List" />
+            <h3>Game Tier List</h3>
+            <p>
+              A simple game tier list layout using HTML and CSS. It features a
+              clean design with game titles, images, and a tier ranking system.
+            </p>
+          </div>
+
+          <div class="card">
+            <img src="images/productCards.png" alt="Product Cards" />
+            <h3>Product Cards</h3>
+            <p>
+              A simple product card layout using HTML and CSS. It showcases
+              product images, titles, and descriptions in a clean and
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

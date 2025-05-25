@@ -48,12 +48,6 @@ header {
   margin: 10px;
   border: 2px solid white;
   border-radius: 12px;
-  transition: transform 0.3s;
-}
-
-.games img:hover {
-  transform: scale(1.1);
-  border-color: #e2ba19;
 }
 
 footer {

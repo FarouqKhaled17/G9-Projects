@@ -18,12 +18,35 @@
         class="logo"
       />
       <h1>Level 1: Responsive Image</h1>
-      <p class="goal">Goal: Make the image disappear</p>
+      <p class="goal">Goal: Resize the screen to hide the image</p>
+
       <img
         src="assets/Tutor Profile Picture.jpg"
         class="hero-img"
         alt="img-1"
       />
+
+      <p id="winText" class="win-message">
+        🎉 You passed the test! Welcome to the next Squid Game round...
+      </p>
     </div>
+
+    <script>
+      const winText = document.getElementById("winText");
+      const heroImg = document.querySelector(".hero-img");
+
+      function checkResponsiveWin() {
+        if (window.innerWidth <= 667) {
+          if (getComputedStyle(heroImg).display === "none") {
+            winText.classList.add("show-win");
+          }
+        } else {
+          winText.classList.remove("show-win");
+        }
+      }
+
+      window.addEventListener("load", checkResponsiveWin);
+      window.addEventListener("resize", checkResponsiveWin);
+    </script>
   </body>
 </html>
